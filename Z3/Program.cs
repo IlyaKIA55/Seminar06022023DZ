@@ -5,11 +5,25 @@
 Console.WriteLine("Введите 8 чисел через запятую");
 string [] strArray = Console.ReadLine().Split(',');
 
-int[] result = new int[strArray.Length];
+// int Number(string message)
+// {
+// Console.WriteLine(message);
+// int numb = Convert.ToInt32(Console.ReadLine());
+// return numb;
+// }
 
-for (int i = 0; i < result.Length; i++)
+int[] result = new int[strArray.Length];
+// Console.WriteLine(result.Length);
+
+// if (result.Length ==8)
+// {
+   for (int i = 0; i < result.Length; i++)
 {
     result[i] = int.Parse(strArray[i]);
 }
-
-Console.WriteLine(string.Join(',', result));
+    Console.WriteLine(string.Join(',', result));
+// }
+// else 
+// {
+//     Console.WriteLine("В введеном числе не 8 цифр");
+// }
