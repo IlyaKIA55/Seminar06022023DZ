@@ -2,28 +2,17 @@
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 
-Console.WriteLine("Введите 8 чисел через запятую");
-string [] strArray = Console.ReadLine().Split(',');
+int [] array = new int[8];
 
-// int Number(string message)
-// {
-// Console.WriteLine(message);
-// int numb = Convert.ToInt32(Console.ReadLine());
-// return numb;
-// }
-
-int[] result = new int[strArray.Length];
-// Console.WriteLine(result.Length);
-
-// if (result.Length ==8)
-// {
-   for (int i = 0; i < result.Length; i++)
+void GArray(int [] array)
 {
-    result[i] = int.Parse(strArray[i]);
+    int index = 0;
+    Random random = new Random();
+    while (index<array.Length)
+    {
+        array[index] = random.Next(1, 100);
+        index++;
+    }
 }
-    Console.WriteLine(string.Join(',', result));
-// }
-// else 
-// {
-//     Console.WriteLine("В введеном числе не 8 цифр");
-// }
+GArray(array);
+Console.WriteLine(string.Join(',',array));
